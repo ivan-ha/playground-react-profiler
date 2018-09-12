@@ -1,7 +1,7 @@
 import { Avatar, Col, List, Row } from 'antd'
-import React, { Component } from 'react';
+import React, { Component } from 'react'
 
-import { generateFakeList } from '../helpers/generateFakeList';
+import { generateFakeList } from '../helpers/generateFakeList'
 
 class App extends Component {
   render() {
@@ -25,8 +25,8 @@ class App extends Component {
           />
         </Col>
       </Row>
-    );
+    )
   }
 }
 
-export default App;
+export default App

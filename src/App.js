@@ -1,18 +1,34 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
+
+import { List } from 'antd'
+import React, { Component } from 'react';
+
+import { generateFakeList } from './helpers/generateFakeList';
+import logo from './logo.svg';
 
 class App extends Component {
   render() {
+    const items = generateFakeList(100)
+
     return (
       <div className="App">
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
         </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+        <div>
+          <List
+            itemLayout="horizontal"
+            dataSource={items}
+            renderItem={item => (
+              <List.Item>
+                <List.Item.Meta
+                  title={item.name}
+                  description={item.country}
+                />
+              </List.Item>
+            )}
+          />
+        </div>
       </div>
     );
   }

@@ -1,4 +1,4 @@
-import { Avatar, List } from 'antd'
+import { Avatar, Col, List, Row } from 'antd'
 import React, { Component } from 'react';
 
 import { generateFakeList } from '../helpers/generateFakeList';
@@ -8,7 +8,8 @@ class App extends Component {
     const items = generateFakeList(100)
 
     return (
-        <div>
+      <Row>
+        <Col span={8} offset={8}>
           <List
             itemLayout="horizontal"
             dataSource={items}
@@ -22,7 +23,8 @@ class App extends Component {
               </List.Item>
             )}
           />
-      </div>
+        </Col>
+      </Row>
     );
   }
 }

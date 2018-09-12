@@ -9,4 +9,5 @@ export const generateFakeList = size =>
     name: faker.name.firstName(),
     country: faker.address.country(),
     gender: faker.random.arrayElement(genders),
+    avatar: faker.image.avatar(),
   }))

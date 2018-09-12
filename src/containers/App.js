@@ -16,7 +16,7 @@ class App extends Component {
             renderItem={item => (
               <List.Item>
                 <List.Item.Meta
-                  avatar={<Avatar src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png" />}
+                  avatar={<Avatar src={item.avatar} />}
                   title={item.name}
                   description={item.country}
                 />

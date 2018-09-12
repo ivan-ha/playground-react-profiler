@@ -1,4 +1,4 @@
-import { Avatar, List } from 'antd'
+import { Avatar, List, Tag } from 'antd'
 import React from 'react'
 
 const ListItem = ({ item }) => (
@@ -8,6 +8,7 @@ const ListItem = ({ item }) => (
       title={item.name}
       description={item.country}
     />
+    <Tag color={item.gender === 'M' ? 'blue' : 'magenta'}>{item.gender}</Tag>
   </List.Item>
 )
 

@@ -1,7 +1,7 @@
 import { Col, Input, Row } from 'antd'
 import React, { Component } from 'react'
 
-import List from '../components/List'
+import MyList from '../components/MyList'
 import { generateFakeList } from '../helpers/generateFakeList'
 
 const list = generateFakeList(100)
@@ -28,7 +28,7 @@ class App extends Component {
             value={value}
             onChange={this.handleInputChange}
           />
-          <List data={list} />
+          <MyList data={list} />
         </Col>
       </Row>
     )

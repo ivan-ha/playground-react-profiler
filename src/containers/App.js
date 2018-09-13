@@ -8,7 +8,6 @@ const list = generateFakeList(100)
 
 class App extends Component {
   state = {
-    data: list,
     value: '',
   }
 
@@ -19,7 +18,7 @@ class App extends Component {
   }
 
   render() {
-    const { data, value } = this.state
+    const { value } = this.state
 
     return (
       <Row>
@@ -29,7 +28,7 @@ class App extends Component {
             value={value}
             onChange={this.handleInputChange}
           />
-          <List data={data} />
+          <List data={list} />
         </Col>
       </Row>
     )

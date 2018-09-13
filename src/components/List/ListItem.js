@@ -8,7 +8,12 @@ const ListItem = ({ item }) => (
       title={item.name}
       description={item.country}
     />
-    <Tag color={item.gender === 'M' ? 'blue' : 'magenta'}>{item.gender}</Tag>
+    <Tag
+      color={item.gender === 'M' ? 'blue' : 'magenta'}
+      className="no-ant-tag-cursor"
+    >
+      {item.gender}
+    </Tag>
   </List.Item>
 )
 

@@ -27,6 +27,7 @@ class App extends Component {
             placeholder="Enter something"
             value={value}
             onChange={this.handleInputChange}
+            size="large"
           />
           <MyList data={list} />
         </Col>

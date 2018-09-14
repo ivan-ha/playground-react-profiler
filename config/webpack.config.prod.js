@@ -271,9 +271,7 @@ module.exports = {
         // https://github.com/mishoo/UglifyJS2/issues/2011
         comparisons: false,
       },
-      mangle: {
-        safari10: true,
-      },
+      mangle: false,
       output: {
         comments: false,
         // Turned on because emoji and regex is not minified properly using default
